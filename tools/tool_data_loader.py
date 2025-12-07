@@ -34,11 +34,12 @@ def view(context):
         st.success(f"✅ {uploaded_file.name} 上传成功")
         st.caption("数据已完成哈希校验，无篡改风险。")
         # 这里实际上为了演示，我们还是依赖 context 里的假数据，或者你可以写逻辑去读取
-    else:
-        st.info("ℹ️ 暂未检测到上传文件，将加载 **系统默认演示数据**。")
+    # else:
+    #     st.info("ℹ️ 暂未检测到上传文件，将加载 **系统默认演示数据**。")
 
-    # 展示数据预览
-    if 'df' in context:
-        with st.expander("🔍 预览加载的数据集", expanded=False):
-            st.dataframe(context['df'].head(5), use_container_width=True)
-            st.caption(f"共 {len(context['df'])} 条记录")
+    # # 展示数据预览
+    # if 'df' in context:
+    #     with st.expander("🔍 预览加载的数据集", expanded=False):
+    #         st.dataframe(context['df'].head(5), use_container_width=True)
+
+    #         st.caption(f"共 {len(context['df'])} 条记录")
